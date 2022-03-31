@@ -1,4 +1,4 @@
-const About=()=><h1>contact page</h1>
+const About=()=><h1> About page</h1>
 
 
 export default  About;

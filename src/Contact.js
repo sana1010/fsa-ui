@@ -1,4 +1,4 @@
-const Contact=()=><h1>contact page</h1>
+const Contact=()=><h1>Contact page</h1>
 
 
 export default  Contact;

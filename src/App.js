@@ -2,13 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './App.css';
-import { BrowserRouter, Route,Routes} from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-
-
-
+import AppRoutes from './AppRouters';
 import 'bootstrap/dist/css/bootstrap.css';
 import UserList from "./users/UserList"
 //jsx-javaScript xml
@@ -19,16 +13,8 @@ function App(){
 //}
 return <div>
     <Header/>
-  <BrowserRouter>
-  <Routes>
-  <Route path='/' element={<Home/>}/>
-  <Route path='/About' element={<About/>}/>
-  <Route path='/Contact' element={<Contact/>}/>
-  <Route path='/users' element={<UserList/>}/>
-  </Routes>
-
-  </BrowserRouter>
-<Footer/>
+  <AppRoutes/>
+  <Footer/>
 
 </div>
 

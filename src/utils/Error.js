@@ -1,8 +1,10 @@
-const Error=()=>{
+const Error=(props)=>{
+return(
 
-<div className="col-md-6">
+    <div className="col-md-6">
 <div class="alert alert-danger">sumthing went wrung</div>
 </div>
+    )
 
 
 

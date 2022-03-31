@@ -8,27 +8,27 @@ import Error  from '../utils/Error';
 class UserList extends React.Component
 {
     constructor(){
-    super();
-    
-    this.state = {
-        users:[],
-        loading:true
-    };
-this.setState({loading:true});
+        super();
+
+    this.state = {  users:[],loading:true,error:false};
+   
+    // this.setState({loading:true});
 setTimeout(() => {
 axios.get('https://api.github.com/users')
 .then(res=>
+
     {
         const data=res.data;
         this.setState({users: data,loading:false,error:false});
 
     })
  .catch(err=>{
- this.setState({loading:false});
+ this.setState({loading:false,error:true});
  console.log(err);
 });
 },1000);
     }
+
 render(){
 return <div>  
 <h1>users</h1>
@@ -38,6 +38,7 @@ return <div>
 <ShouldRender cond={this.state.error}>
     <Error/>
 </ShouldRender>     
+
 {this.state.users.map(user=> <User  key={user.login} user={user}/>) }
 </div>
 
