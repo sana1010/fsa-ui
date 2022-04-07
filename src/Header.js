@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+
 function Header(){
 return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
@@ -20,10 +21,10 @@ return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <li className="nav-item">
           <Link className="nav-link " to ="/Contact">Contact</Link>
         </li>
-     
-
       </ul>
-     
+      <div>
+        <Link to="/Register" className="btn btn-sm btn-danger">Register</Link>
+      </div>
     </div>
 </nav>
 
