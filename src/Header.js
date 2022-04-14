@@ -25,6 +25,10 @@ return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div>
         <Link to="/Register" className="btn btn-sm btn-danger">Register</Link>
       </div>
+      
+      <div>
+      <Link to="/login" className="btn btn-sm btn-danger">login</Link>
+      </div>
     </div>
 </nav>
 
